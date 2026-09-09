@@ -4,12 +4,13 @@ import type { ReactNode } from "react";
 
 const NAV = [
   { to: "/", label: "Home", exact: true },
-  { to: "/email", label: "Email Generator" },
-  { to: "/notes", label: "Meeting Summarizer" },
-  { to: "/planner", label: "Task Planner" },
-  { to: "/research", label: "Research Assistant" },
-  { to: "/chat", label: "Chat Assistant" },
+  { to: "/email", label: "Email Generator", exact: false },
+  { to: "/notes", label: "Meeting Summarizer", exact: false },
+  { to: "/planner", label: "Task Planner", exact: false },
+  { to: "/research", label: "Research Assistant", exact: false },
+  { to: "/chat", label: "Chat Assistant", exact: false },
 ] as const;
+
 
 function NavDot({ label }: { label: string }) {
   if (label === "Home") return <span className="size-2.5 rounded-[3px] bg-current opacity-70" />;
